@@ -30,7 +30,8 @@ it's own color.
 ## Credits
 
 * ["Programatically generate gorgeous social media images in Go."](https://pace.dev/blog/2020/03/02/dynamically-generate-social-images-in-golang-by-mat-ryer.html) by Mat Ryer
-* [`Go Graphics`](https://github.com/fogleman/gg)
+* [JetBrains Mono font](https://www.jetbrains.com/lp/mono/)
+* [Go Graphics](https://github.com/fogleman/gg) package for Go
 * [`geopattern`](https://github.com/pravj/geopattern) package for Go
 * [`oksvg`](https://github.com/srwiley/oksvg) package for Go
 

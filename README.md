@@ -1,6 +1,6 @@
 # ogi
 
-`ogi` (Open Graph Image) is a tool that generates social images with a geopattern background.
+`ogi` (**o**pen **g**raph **i**mage) is a tool that generates social media images with a geopattern background.
 
 ## Install
 
@@ -19,11 +19,13 @@ $ ogi --text="Hello, world." \
   > output.png
 ```
 
-Output:
+The command above created `output.png` file with the following image:
 
 ![Sample output](./docs/output.png)
 
-NOTE: The color of the background depends on `text` option.
+**NOTE:** The color of the background depends on the value of the `text` option.
+This value is used a seed for color generation. In other words, each text has
+it's own color.
 
 ## Credits
 

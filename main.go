@@ -157,10 +157,12 @@ func generateBackgroundTile() (image.Image, error) {
 
 // Renders semi-transparend overlay rectangle.
 func renderOverlay(ctx *gg.Context) error {
-	borderRadius := 8.0
-	margin := 30.0
+	borderRadius := 16.0
+	margin := 80.0
+
 	x := margin
 	y := margin
+
 	width := float64(ctx.Width()) - (2.0 * margin)
 	height := float64(ctx.Height()) - (2.0 * margin)
 
@@ -173,8 +175,8 @@ func renderOverlay(ctx *gg.Context) error {
 
 // Renders the given text line (with shadow).
 func renderText(ctx *gg.Context) error {
-	marginLeft := 60.0
-	marginTop := 90.0
+	marginLeft := 160.0
+	marginTop := 160.0
 
 	x := marginLeft
 	y := marginTop
@@ -184,7 +186,7 @@ func renderText(ctx *gg.Context) error {
 	textColor := color.White
 	shadowColor := color.Black
 
-	fontSize := 90.0
+	fontSize := 70.0
 
 	fontPath := filepath.Join("fonts", "JetBrainsMono-Bold.ttf")
 	if err := ctx.LoadFontFace(fontPath, fontSize); err != nil {
@@ -202,18 +204,24 @@ func renderText(ctx *gg.Context) error {
 
 // Renders the given note.
 func renderNote(ctx *gg.Context) error {
-	fontSize := 40.0
+	fontSize := 30.0
 
 	fontPath := filepath.Join("fonts", "JetBrainsMono-Regular.ttf")
 	if err := ctx.LoadFontFace(fontPath, fontSize); err != nil {
 		return fmt.Errorf("Error loading font: %w", err)
 	}
 
-	marginBottom := 30.0
+	marginLeft := 160.0
+	marginBottom := 100.0
+
 	_, height := ctx.MeasureString(cfg.note)
-	x := 70.0
+
+	x := marginLeft
 	y := float64(ctx.Height()) - height - marginBottom
 
+	textColor := color.White
+
+	ctx.SetColor(textColor)
 	ctx.DrawString(cfg.note, x, y)
 
 	return nil

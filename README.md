@@ -16,12 +16,14 @@ $ ogi --text="Hello, world." \
       --width=1200 \
       --height=628 \
       --pattern="nested-squares" \
-  > output.png
+  > cover.png
 ```
 
-The command above created `output.png` file with the following image:
+The command above created `cover.png` file with the following image:
 
-![Sample output](./docs/output.png)
+![Example](./docs/examples/cover.png)
+
+See more examples in [docs/examples][./docs/examples] directory.
 
 **NOTE:** The color of the background depends on the value of the `text` option.
 This value is used a seed for color generation. In other words, each text has
